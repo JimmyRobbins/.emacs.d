@@ -3,6 +3,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bongo-enabled-backends (quote (vlc speexdec afplay)))
+ '(custom-theme-directory "~/.emacs.d/custom-themes")
  '(erc-hide-list (quote ("JOIN" "PART" "QUIT")))
  '(erc-modules
    (quote
@@ -15,7 +17,6 @@
  '(mm-inline-large-images (quote resize))
  '(mouse-wheel-scroll-amount (quote (1)))
  '(ns-pop-up-frames nil)
- '(python-shell-interpreter "python2")
  '(text-scale-mode-step 1.1))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

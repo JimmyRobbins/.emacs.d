@@ -48,8 +48,7 @@
 ;; Modes associated with certain file types: ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-hook 'python-mode-hook '(require 'settings-python))
-;; (eval-after-load 'python-mode '(require 'settings-python))
+(eval-after-load 'python-mode '(require 'settings-python))
 (eval-after-load 'sclang-mode '(require 'settings-SCLang))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

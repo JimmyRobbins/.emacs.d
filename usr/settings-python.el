@@ -1,15 +1,10 @@
 ;;; settings-python --- Setting up for python 
 
+;; Choose which interpretor to use
+(setq python-shell-interpreter "/opt/local/bin/python")
 ;; Jedi for python
-
-(print "running settings-python")
-(sleep-for 1)
-
 'jedi:setup
 (setq jedi:complete-on-dot t)
 
-;; Syntax checking with fly-make
-(flycheck-mode 1)
-	
 (provide 'settings-python)
 ;;; Settings-python ends here
