@@ -23,11 +23,13 @@
 ;; Setup Extensions ;;
 ;;;;;;;;;;;;;;;;;;;;;;
 
+(require 'my-functions)
 (require 'my-key-bindings)
 
 ;; Always on
 (require 'settings-evil)
 (require 'settings-ido)
+(require 'settings-yasnippet)
 
 ;; On as soon as we need them
 (eval-after-load 'shell '(require 'settings-shell))
@@ -72,6 +74,10 @@
 ;; Allow myself to erase the buffer
 (put 'erase-buffer 'disabled nil)
 
+;; Search everything with C-h a
+(setq apropos-do-all t)
+
+(setq visible-bell t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Put Customize code elsewhere ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
