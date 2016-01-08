@@ -7,6 +7,12 @@
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+;; Smart M-x!
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 ;; Moving around windows with C-arrows
 (global-set-key [M-left] 'windmove-left)
 (global-set-key [M-right] 'windmove-right)

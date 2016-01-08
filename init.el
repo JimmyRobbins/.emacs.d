@@ -80,7 +80,7 @@
 ;; Search everything with C-h a
 (setq apropos-do-all t)
 
-(setq visible-bell t)
+(setq load-prefer-newer t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Put Customize code elsewhere ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
