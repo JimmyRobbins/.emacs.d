@@ -1,4 +1,4 @@
-;; Configurations for using SuperCollider in Emacs
+;;; settings-SCLang --- Configurations for using SuperCollider in Emacs
 
 ;; Enable sclang extensions
 (add-hook 'sclang-mode-hook 'sclang-extensions-mode)

@@ -33,6 +33,7 @@
 (require 'settings-evil)
 (require 'settings-ido)
 (require 'settings-yasnippet)
+(require 'settings-flycheck)
 
 ;; On as soon as we need them
 (eval-after-load 'shell '(require 'settings-shell))
@@ -47,7 +48,8 @@
 ;; Modes associated with certain file types: ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(eval-after-load 'python-mode '(require 'settings-python))
+(add-hook 'python-mode-hook '(require 'settings-python))
+;; (eval-after-load 'python-mode '(require 'settings-python))
 (eval-after-load 'sclang-mode '(require 'settings-SCLang))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
