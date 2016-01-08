@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: if
+# key: if
+# binding: direct-keybinding
+# expand-env: ((some-var some-value))
+# type: command
+# --
+
+if ( ${1condition},
+   { ${2true_function} },
+   { ${3false_function} }
+   );
+$0
