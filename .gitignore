@@ -4,3 +4,4 @@ backups/*
 auto-save-list/*
 elpa/*
 games/*
+/smex-items
