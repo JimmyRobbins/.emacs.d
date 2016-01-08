@@ -2,6 +2,9 @@
 ;; Cosmetics ;;
 ;;;;;;;;;;;;;;;
 
+;; No startup screen
+(setq inhibit-startup-message t)
+
 ;; Fullscreen on startup
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
