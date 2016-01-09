@@ -12,6 +12,18 @@
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
+;; Make magit easier to launch (I don't need mail)
+(global-set-key (kbd "C-c m")
+                (lambda ()
+                  (interactive)
+                  (magit-status)))
+
+;; Bring the line below onto the end of current line
+(global-set-key (kbd "M-j")
+                (lambda ()
+                  (interactive)
+                  (join-line -1)))
+
 ;; expand-region
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
