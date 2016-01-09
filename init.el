@@ -61,8 +61,8 @@
 
 ;; Save point between sessions
 (require 'saveplace)
-(setq-default saveplace t)
-(setq save-place-file "~/.emacs.d/places")
+(setq-default save-place t)
+(setq save-place-file "~/.emacs.d/.places")
 
 ;; When text is selected, delete that text with DEL,
 ;;   or replace it by inserting new text
