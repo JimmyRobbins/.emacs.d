@@ -24,5 +24,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#002b36" :foreground "#839496" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "nil" :family "Inconsolata"))))
- '(which-func ((t (:weight bold)))))
+ '(show-paren-match ((t (:background "#cb4b16" :foreground "#073642" :weight bold))))
+ '(show-paren-mismatch ((t (:background "#dc322f" :foreground "#002b36" :weight bold))))
+ '(which-func ((t (:slant italic)))))

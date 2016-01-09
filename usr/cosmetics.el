@@ -3,16 +3,26 @@
 ;; Fullscreen on startup
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
-;; Font size
+;; Font 
 (set-face-attribute 'default nil :height 150) 
+(set-face-attribute 'default nil :family "Inconsolata") 
 
-;; Get rid of visual clutter
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Get rid of visual clutter ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq inhibit-startup-message t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-no-scroll-bar)
 
-;; Add visual clutter
+;; Diminish the mode line
+(require 'diminish)
+(diminish 'yas/minor-mode)
+(diminish 'undo-tree-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; Add visual clutter ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
 
 (show-paren-mode t)
 (global-hl-line-mode 1)
