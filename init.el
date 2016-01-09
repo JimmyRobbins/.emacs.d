@@ -43,6 +43,7 @@
 
 (eval-after-load 'python-mode '(require 'settings-python))
 (eval-after-load 'sclang-mode '(require 'settings-cslang))
+(eval-after-load 'emacs-lisp-mode '(require 'settings-elisp))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting useful parameters ;;
