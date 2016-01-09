@@ -1,5 +1,4 @@
-# .emacs.d
-my emacs configuration
+# my emacs configuration
 
 ## Files
 
