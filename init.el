@@ -37,6 +37,7 @@
 
 ;; On as soon as we need them
 (eval-after-load 'shell '(require 'settings-shell))
+(eval-after-load 'magit '(require 'settings-magit))
 
 ;; Color Themes
 (load-theme 'solarized t)
