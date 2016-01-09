@@ -3,15 +3,15 @@
 ## Files
 
 init.el
-Home base file
+-- Home base file
 
 custom.el
-Used by the built-in customize tool, not by me
+-- Used by the built-in customize tool, not by me
 
 ## Directories
 
 /usr
-Contains my configuration code that I moved out of init.el, for sanity reasons
+-- Contains my configuration code that I moved out of init.el, for sanity reasons
 
 /SuperCollider
-files used by SuperCollider mode
+-- files used by SuperCollider mode
