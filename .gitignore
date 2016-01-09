@@ -1,9 +1,10 @@
-/.DS_Store
-backups/*
-.tutor/*
-auto-save-list/*
-elpa/*
-games/*
+backups
+.tutor
+auto-save-list
+elpa
+games
 /smex-items
 /ac-comphist.dat
 *~
+*.elc
+*.DS_Store
