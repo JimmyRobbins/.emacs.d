@@ -1,15 +1,8 @@
-;;;;;;;;;;;;;;;
-;; Cosmetics ;;
-;;;;;;;;;;;;;;;
-
-;; No startup screen
-(setq inhibit-startup-message t)
-
-;; Fullscreen on startup
-(set-frame-parameter nil 'fullscreen 'fullboth)
-
-;; Font size
-(set-face-attribute 'default nil :height 150) 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
+;; ;; Jimmy Robbins' Emacs Configuration!! ;; ;;
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Are we on a mac (use this later)
 (setq is-mac (equal system-type 'darwin))
@@ -26,23 +19,21 @@
 ;; Setup Extensions ;;
 ;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'my-functions)
-(require 'my-key-bindings)
 
 ;; Always on
+(require 'cosmetics)
 (require 'settings-evil)
 (require 'settings-ido)
 (require 'settings-yasnippet)
 (require 'settings-flycheck)
 
+;; These need to reference above
+(require 'my-functions)
+(require 'my-key-bindings)
+
 ;; On as soon as we need them
 (eval-after-load 'shell '(require 'settings-shell))
 (eval-after-load 'magit '(require 'settings-magit))
-
-;; Color Themes
-(load-theme 'solarized t)
-(set-frame-parameter nil 'background-mode 'dark)
-(enable-theme 'solarized)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -50,7 +41,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (eval-after-load 'python-mode '(require 'settings-python))
-(eval-after-load 'sclang-mode '(require 'settings-SCLang))
+(eval-after-load 'sclang-mode '(require 'settings-cslang))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting useful parameters ;;
@@ -66,11 +57,12 @@
 ;; Put all backups into one place
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
-;; When text is selected, delete that text with DEL, or replace it by inserting new text
+;; When text is selected, delete that text with DEL,
+;;   or replace it by inserting new text
 (delete-selection-mode t)
 
-;; Always show matching pairs of parenthesis
-(show-paren-mode t)
+;; No tabs
+(setq-default indent-tabs-mode nil)
 
 ;; I might need this someday, who knows?
 ;;    It makes ediff compare files side by side all the time
@@ -83,6 +75,7 @@
 (setq apropos-do-all t)
 
 (setq load-prefer-newer t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Put Customize code elsewhere ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

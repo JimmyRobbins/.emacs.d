@@ -1,9 +1,8 @@
 ;; Settings for Flycheck
 
-(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'python-mode-hook 'flycheck-mode)
 
-(setq-default flycheck-disabled-checkers '(emacs-lisp
-					   emacs-lisp-checkdoc)) 
+(setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)) 
 
 
 (provide 'settings-flycheck)
