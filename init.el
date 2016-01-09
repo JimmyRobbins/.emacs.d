@@ -57,6 +57,12 @@
 
 ;; Put all backups into one place
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq vc-make-backup-files t)
+
+;; Save point between sessions
+(require 'saveplace)
+(setq-default saveplace t)
+(setq save-place-file "~/.emacs.d/places")
 
 ;; When text is selected, delete that text with DEL,
 ;;   or replace it by inserting new text
