@@ -4,9 +4,9 @@
 (setq python-shell-interpreter "/opt/local/bin/python")
 
 ;; Jedi for python
-;; (require 
-;; (jedi:setup)
-;; (setq jedi:complete-on-dot t)
+(require 'jedi)
+(jedi:setup)
+(setq jedi:complete-on-dot t)
 
 ;; Show Fill Column at 80
 (require 'fill-column-indicator)
