@@ -5,6 +5,9 @@
 (setq ido-enable-flex-matching t)
 (ido-vertical-mode 1)
 
+(require 'ido-ubiquitous)
+(ido-ubiquitous-mode 1)
+
 (add-to-list 'ido-ignore-files "\\.pyc")
 (add-to-list 'ido-ignore-files "\\.elc")
 

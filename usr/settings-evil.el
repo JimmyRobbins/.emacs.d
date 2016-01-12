@@ -6,6 +6,9 @@
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 
+(require 'evil-matchit)
+(global-evil-matchit-mode 1)
+
 
 ;; Occasionally default to emacs state
 (evil-set-initial-state 'shell-mode 'emacs)
@@ -25,5 +28,6 @@
 
 (evil-ex-define-cmd "wk" 'undefined)
 (evil-ex-define-cmd "k[ill]" 'kill-this-buffer)
+(evil-ex-define-cmd "g[it]" 'magit-status)
 
 (provide 'settings-evil)
