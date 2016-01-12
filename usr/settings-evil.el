@@ -15,7 +15,7 @@
 (define-key evil-normal-state-map "gD" 'dired-jump)
 (define-key evil-normal-state-map "gs" 'shell)
 (define-key evil-normal-state-map "gb" 'ido-switch-buffer)
-(define-key evil-normal-state-map "gs" 'ispell-word)
-(define-key evil-normal-state-map "gS" 'ispell-buffer)
+(define-key evil-normal-state-map "gp" 'ispell-word)
+(define-key evil-normal-state-map "gP" 'ispell-buffer)
 
 (provide 'settings-evil)

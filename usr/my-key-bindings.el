@@ -51,5 +51,4 @@
   "/" 'isearch-forward
   "?" 'isearch-backward)
 
-
 (provide 'my-key-bindings)
