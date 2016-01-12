@@ -1,9 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: if
-# key: if
+# name: dund
+# key: dund
 # binding: direct-keybinding
 # --
-if ( ${1:condition}, {
-   ${0:true_function}
-   }
-   );
+__${init}__

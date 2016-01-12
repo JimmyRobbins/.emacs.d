@@ -1,9 +1,7 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: if
-# key: if
+# name: ifmain
+# key: ifmain
 # binding: direct-keybinding
 # --
-if ( ${1:condition}, {
-   ${0:true_function}
-   }
-   );
+if __name__ == '__main__':
+   $0

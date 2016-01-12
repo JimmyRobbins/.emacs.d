@@ -14,6 +14,7 @@
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/usr")
 (add-to-list 'load-path "~/.emacs.d/elpa")
+(add-to-list 'load-path "~/.emacs.d/SuperCollider")
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Setup Extensions ;;
@@ -41,7 +42,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (eval-after-load 'python-mode '(require 'settings-python))
-(eval-after-load 'sclang-mode '(require 'settings-cslang))
+
+(require 'sclang)                       ; enable the mode
+(eval-after-load 'sclang-mode '(require 'settings-sclang))
 (eval-after-load 'emacs-lisp-mode '(require 'settings-elisp))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
