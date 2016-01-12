@@ -3,9 +3,12 @@
 ;; Fullscreen on startup
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
-;; Font 
-(set-face-attribute 'default nil :height 150) 
-(set-face-attribute 'default nil :family "Inconsolata") 
+;; Font
+(set-face-attribute 'default nil :height 150)
+(set-face-attribute 'default nil :family "Inconsolata")
+
+;; Get rid of extra whitespace every-time we save
+(add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Get rid of visual clutter ;;
@@ -35,5 +38,5 @@
 (load-theme 'solarized t)
 (set-frame-parameter nil 'background-mode 'dark)
 (enable-theme 'solarized)
- 
+
 (provide 'cosmetics)

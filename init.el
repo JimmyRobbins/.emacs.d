@@ -4,7 +4,6 @@
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
 ;; Are we on a mac (use this later)
 (setq is-mac (equal system-type 'darwin))
 
@@ -64,6 +63,9 @@
 (require 'saveplace)
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/.places")
+
+;; Use UTF-8
+(prefer-coding-system 'utf-8)
 
 ;; When text is selected, delete that text with DEL,
 ;;   or replace it by inserting new text
