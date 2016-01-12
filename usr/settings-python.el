@@ -3,6 +3,11 @@
 ;; Choose which interpretor to use
 (setq python-shell-interpreter "/opt/local/bin/python")
 
+;; Setup virtual environment support
+(require 'virtualenvwrapper)
+(venv-initialize-interactive-shells)
+(setq venv-location "~/.virtualenvs/")
+
 ;; Jedi for python
 (require 'jedi)
 (jedi:setup)
