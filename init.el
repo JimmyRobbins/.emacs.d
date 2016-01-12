@@ -45,6 +45,7 @@
 
 (require 'sclang)                       ; enable the mode
 (eval-after-load 'sclang-mode '(require 'settings-sclang))
+
 (eval-after-load 'emacs-lisp-mode '(require 'settings-elisp))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
