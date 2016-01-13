@@ -3,6 +3,8 @@
 (require 'evil)
 (evil-mode 1)
 
+(setq evil-want-fine-undo nil)
+
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 
@@ -26,7 +28,10 @@
 
 (define-key evil-normal-state-map "z+" 'ispell-buffer) ; Shift-=
 
-(evil-ex-define-cmd "wk" 'undefined)
+(define-key evil-normal-state-map "mg" 'magit-status)
+
+(evil-ex-define-cmd "wk" 'my-buffer-write-kill)
+(evil-ex-define-cmd "wc" 'my-buffer-write-close)
 (evil-ex-define-cmd "k[ill]" 'kill-this-buffer)
 (evil-ex-define-cmd "g[it]" 'magit-status)
 
