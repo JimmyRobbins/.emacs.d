@@ -1,7 +1,10 @@
-;;; settings-python --- Setting up for python 
+;;; settings-python --- Setting up for python
 
 ;; Choose which interpretor to use
 (setq python-shell-interpreter "/opt/local/bin/python")
+
+;; Enable code folding
+(hs-minor-mode 1)
 
 ;; Setup virtual environment support
 (require 'virtualenvwrapper)

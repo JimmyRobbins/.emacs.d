@@ -28,8 +28,6 @@
 
 (define-key evil-normal-state-map "z+" 'ispell-buffer) ; Shift-=
 
-(define-key evil-normal-state-map "mg" 'magit-status)
-
 (evil-ex-define-cmd "wk" 'my-buffer-write-kill)
 (evil-ex-define-cmd "wc" 'my-buffer-write-close)
 (evil-ex-define-cmd "k[ill]" 'kill-this-buffer)

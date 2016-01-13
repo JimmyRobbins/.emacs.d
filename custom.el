@@ -11,7 +11,8 @@
     (autojoin button completion fill irccontrols list match menu move-to-prompt netsplit networks noncommands readonly ring services stamp spelling track)))
  '(erc-nick "gesualdo")
  '(flycheck-pylintrc "~/.pylintrc")
- '(flycheck-python-pylint-executable "~/.virtualenvs/DataVizProj/bin/pylint")
+ '(flycheck-python-pylint-executable
+   "/opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/pylint")
  '(ispell-program-name "/opt/local/bin/aspell")
  '(mm-inline-large-images (quote resize))
  '(mouse-wheel-scroll-amount (quote (1)))
