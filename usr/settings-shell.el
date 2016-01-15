@@ -8,6 +8,8 @@
 ;; use hippie-expand for tab completion in shell
 (define-key shell-mode-map [(tab)] 'hippie-expand)
 
+(global-hl-line-unhighlight)
+
 (defun my-shell-clear ()
   (interactive)
   (let ((comint-buffer-maximum-size 0))

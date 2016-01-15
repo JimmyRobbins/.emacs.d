@@ -3,6 +3,7 @@
 (require 'evil)
 (evil-mode 1)
 
+(setq evil-cross-lines t)
 (setq evil-want-fine-undo nil)
 
 (require 'evil-surround)
@@ -13,12 +14,15 @@
 
 
 ;; Occasionally default to emacs state
-(evil-set-initial-state 'shell-mode 'emacs)
+;; (evil-set-initial-state 'shell-mode 'emacs)
 (evil-set-initial-state 'help-mode 'emacs)
 
 ;;;;;;;;;;;;;;;;;;
 ;; Key-bindings ;;
 ;;;;;;;;;;;;;;;;;;
+
+(define-key evil-normal-state-map "j" 'evil-next-visual-line)
+(define-key evil-normal-state-map "k" 'evil-previous-visual-line)
 
 (define-key evil-normal-state-map "gf" 'ido-find-file)
 (define-key evil-normal-state-map "gF" 'evil-find-file-at-point-with-line)

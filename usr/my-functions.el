@@ -12,12 +12,12 @@
   "A Visual bell function, flashes the screen momentarily"
   (interactive)
   (setq original-bg-color (face-attribute 'default :background))
-  (set-face-background 'default "#b58900")
-  (sleep-for 0.05)
+  (set-face-background 'default "#cb4b16")
+  (sleep-for 0.025)
   (set-face-background 'default original-bg-color))
 
 (setq visible-bell 1)
-(setq ring-bell-function 'ring-bell-invert-colors)
+(setq ring-bell-function 'my-bell-flash-orange)
 
 (defun my-buffer-write-kill ()
   "Save the buffer and then kill, written as a replacement for :wq in evil"

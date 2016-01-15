@@ -28,6 +28,7 @@
 (require 'settings-yasnippet)
 (require 'settings-flycheck)
 
+
 ;; These need to reference above
 (require 'my-functions)
 (require 'my-key-bindings)
