@@ -32,4 +32,12 @@ but still doesn't quit emacs if it's on the last window"
   (save-buffer)
   (kill-buffer-and-window))
 
+(defun my-kill-other-buffer ()
+  "Kill the other buffer"
+  (interactive)
+  (other-window 1)
+  (kill-this-buffer)
+  (other-window -1))
+
+
 (provide 'my-functions)

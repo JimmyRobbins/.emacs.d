@@ -5,14 +5,15 @@
   (require 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
-;; use hippie-expand for tab completion in shell
-(define-key shell-mode-map [(tab)] 'hippie-expand)
-
 (global-hl-line-unhighlight)
 
 (defun my-shell-clear ()
   (interactive)
   (let ((comint-buffer-maximum-size 0))
     (comint-truncate-buffer)))
+
+
+(define-key shell-mode-map "C-l" 'my-shell-clear)
+(define-key shell-mode-map [(tab)] 'hippie-expand)
 
 (provide 'settings-shell)

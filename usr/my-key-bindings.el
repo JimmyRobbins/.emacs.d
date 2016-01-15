@@ -14,15 +14,15 @@
 
 ;; Make magit easier to launch (I don't need mail)
 (global-set-key (kbd "C-c m")
-		(lambda ()
-		  (interactive)
-		  (magit-status)))
+                (lambda ()
+                  (interactive)
+                  (magit-status)))
 
 ;; Bring the line below onto the end of current line
 (global-set-key (kbd "M-j")
-		(lambda ()
-		  (interactive)
-		  (join-line -1)))
+                (lambda ()
+                  (interactive)
+                  (join-line -1)))
 
 ;; expand-region
 (require 'expand-region)
@@ -39,6 +39,8 @@
 (global-set-key [M-right] 'windmove-right)
 (global-set-key [M-up] 'windmove-up)
 (global-set-key [M-down] 'windmove-down)
+
+(global-set-key (kbd "C-x M-k") 'my-kill-other-buffer)
 
 ;; Recent files
 (require 'recentf)
