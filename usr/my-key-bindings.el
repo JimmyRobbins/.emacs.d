@@ -12,7 +12,7 @@
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
-;; Make magit easier to launch (I don't need mail)
+;; Make magit easier to launch
 (global-set-key (kbd "C-c m")
                 (lambda ()
                   (interactive)

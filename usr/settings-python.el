@@ -20,3 +20,5 @@
 (require 'fill-column-indicator)
 (fci-mode 1)
 (set-fill-column 80)
+
+(provide 'settings-python)

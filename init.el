@@ -42,12 +42,15 @@
 ;; Modes associated with certain file types: ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(eval-after-load 'python-mode '(require 'settings-python))
+(with-eval-after-load 'python-mode
+  (require 'settings-python))
 
 (require 'sclang)                       ; enable the mode
-(eval-after-load 'sclang-mode '(require 'settings-sclang))
+(with-eval-after-load 'sclang-mode
+  (require 'settings-sclang))
 
-(eval-after-load 'emacs-lisp-mode '(require 'settings-elisp))
+(with-eval-after-load 'emacs-lisp-mode
+  (require 'settings-elisp))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting useful parameters ;;
