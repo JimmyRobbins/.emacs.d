@@ -2,6 +2,10 @@
 
 ;; go to function definition with M-. and back again with M-,
 (require 'elisp-slime-nav)
-(elisp-slime-nav-mode t)
+
+(defun my-emacs-lisp-mode-hook ()
+  (elisp-slime-nav-mode t))
+
+(add-hook 'emacs-lisp-mode-hook 'my-emacs-lisp-mode-hook)
 
 (provide 'settings-elisp)

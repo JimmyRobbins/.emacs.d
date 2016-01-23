@@ -23,6 +23,7 @@
 (diminish 'yas-minor-mode)
 (diminish 'undo-tree-mode)
 (diminish 'hs-minor-mode)
+(diminish 'column-enforce-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add visual clutter ;;

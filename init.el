@@ -27,7 +27,6 @@
 (require 'settings-ido)
 (require 'settings-yasnippet)
 (require 'settings-flycheck)
-(require 'settings-prog-mode)
 
 
 ;; These need to reference above
@@ -43,15 +42,13 @@
 ;; Modes associated with certain file types: ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(require 'settings-prog-mode)
 (require 'sclang)                       ; enable the mode
-(with-eval-after-load 'sclang-mode
-  (load-library "settings-sclang"))
+(add-hook 'sclang-mode
+  (lambda () (load-library "settings-sclang")))
 
-(with-eval-after-load 'python
-  (load-library "settings-python"))
-
-(with-eval-after-load 'lisp-mode
-  (load-library "settings-elisp"))
+(require 'settings-python)
+(require 'settings-elisp)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting useful parameters ;;
