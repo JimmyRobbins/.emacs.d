@@ -4,6 +4,4 @@
 (require 'elisp-slime-nav)
 (elisp-slime-nav-mode t)
 
-(hs-minor-mode t)
-
 (provide 'settings-elisp)

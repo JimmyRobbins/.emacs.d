@@ -29,6 +29,7 @@
 (define-key evil-normal-state-map "gD" 'dired-jump)
 (define-key evil-normal-state-map "gs" 'shell)
 (define-key evil-normal-state-map "gb" 'ido-switch-buffer)
+(define-key evil-normal-state-map "zA" 'evil-open-folds)
 
 (define-key evil-normal-state-map "z+" 'ispell-buffer) ; Shift-=
 

@@ -6,11 +6,13 @@
 ;; Escape should get us out of everything
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
-(define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
-(define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
-(define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
-(define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
-(define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-ns-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
+
+(global-set-key (kbd "RET") 'newline-and-indent)
 
 ;; Make magit easier to launch
 (global-set-key (kbd "C-c m")
@@ -35,10 +37,10 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Moving around windows with C-arrows
-(global-set-key [M-left] 'windmove-left)
-(global-set-key [M-right] 'windmove-right)
-(global-set-key [M-up] 'windmove-up)
-(global-set-key [M-down] 'windmove-down)
+(global-set-key [C-M-left] 'windmove-left)
+(global-set-key [C-M-right] 'windmove-right)
+(global-set-key [C-M-up] 'windmove-up)
+(global-set-key [C-M-down] 'windmove-down)
 
 (global-set-key (kbd "C-x M-k") 'my-kill-other-buffer)
 

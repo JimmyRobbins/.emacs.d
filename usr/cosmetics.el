@@ -87,28 +87,29 @@
       cyan-l    "#69CABF"
       green-d   "#546E00"
       green-l   "#B4C342")
-  ;; General purpose colors
+
+;; General purpose colors
 (set-face-attribute 'show-paren-match nil
-		    :background blue :foreground s-base02)
+                    :background blue :foreground s-base02)
 (set-face-attribute 'show-paren-mismatch nil :background red)
 
 ;; Font lock faces
 (set-face-attribute 'font-lock-constant-face nil
-		    :weight 'normal)
+                    :weight 'normal)
 (set-face-attribute 'font-lock-comment-face nil
-		    ;; :foreground orange
-		    :slant 'italic)
+                    ;; :foreground orange
+                    :slant 'italic)
 ;; (set-face-attribute 'font-lock-comment-delimiter-face nil
 ;;                     :foreground orange)
 
-  ;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;
 ;; Shell Mode Colors ;;
-  ;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;
 (with-eval-after-load 'comint
   (set-face-attribute 'comint-highlight-prompt nil
-		      :foreground green)
+                      :foreground green)
   (set-face-attribute 'comint-highlight-input nil
-		      :foreground s-base01))
+                      :foreground s-base01))
 ;; Mode line colors
 ;; (set-face-attribute 'mode-line-highlight nil
 ;;                     :foreground yellow)

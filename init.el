@@ -4,7 +4,7 @@
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Are we on a mac (use this later)
+
 (setq is-mac (equal system-type 'darwin))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -27,6 +27,7 @@
 (require 'settings-ido)
 (require 'settings-yasnippet)
 (require 'settings-flycheck)
+(require 'settings-prog-mode)
 
 
 ;; These need to reference above
@@ -34,30 +35,30 @@
 (require 'my-key-bindings)
 
 ;; On as soon as we need them
-(eval-after-load 'shell '(require 'settings-shell))
-(eval-after-load 'magit '(require 'settings-magit))
+(with-eval-after-load 'shell (require 'settings-shell))
+(with-eval-after-load 'magit (require 'settings-magit))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Modes associated with certain file types: ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(with-eval-after-load 'python-mode
-  (require 'settings-python))
-
 (require 'sclang)                       ; enable the mode
 (with-eval-after-load 'sclang-mode
-  (require 'settings-sclang))
+  (load-library "settings-sclang"))
 
-(with-eval-after-load 'emacs-lisp-mode
-  (require 'settings-elisp))
+(with-eval-after-load 'python
+  (load-library "settings-python"))
+
+(with-eval-after-load 'lisp-mode
+  (load-library "settings-elisp"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting useful parameters ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Macify!
-(when is-mac
+(if is-mac
   (require 'mac))
 
 ;; See all ELPA packages
