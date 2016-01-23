@@ -102,6 +102,10 @@
 ;; (set-face-attribute 'font-lock-comment-delimiter-face nil
 ;;                     :foreground orange)
 
+(with-eval-after-load 'column-enforce-mode
+  (set-face-attribute 'column-enforce-face nil
+                      :background red
+                      :foreground s-base2))
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; Shell Mode Colors ;;
 ;;;;;;;;;;;;;;;;;;;;;;;

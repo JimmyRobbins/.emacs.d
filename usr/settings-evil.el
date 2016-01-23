@@ -35,6 +35,7 @@
 (define-key evil-normal-state-map "gb" 'ido-switch-buffer)
 
 (define-key evil-normal-state-map "zA" 'evil-open-folds)
+(define-key evil-normal-state-map "zC" 'evil-close-folds)
 (define-key evil-normal-state-map "z+" 'ispell-buffer) ; Shift-=
 
 (evil-ex-define-cmd "wk" 'my-buffer-write-kill)
