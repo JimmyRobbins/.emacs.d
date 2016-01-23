@@ -20,12 +20,6 @@
                   (interactive)
                   (magit-status)))
 
-;; Bring the line below onto the end of current line
-(global-set-key (kbd "M-j")
-                (lambda ()
-                  (interactive)
-                  (join-line -1)))
-
 ;; expand-region
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
