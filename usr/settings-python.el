@@ -7,6 +7,8 @@
 
 (add-hook 'python-mode-hook 'my-python-mode-hook)
 
+(defalias 'workon 'pyenv-workon)
+
 (define-key elpy-mode-map (kbd "M-,") 'pop-tag-mark)
 
 (provide 'settings-python)

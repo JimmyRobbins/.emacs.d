@@ -2,3 +2,5 @@
 
 
 (defalias 'toggle-monospace 'variable-pitch-mode)
+
+(provide 'my-aliases)

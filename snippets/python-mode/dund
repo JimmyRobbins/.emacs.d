@@ -3,4 +3,4 @@
 # key: dund
 # binding: direct-keybinding
 # --
-__${init}__
+__${1:init}__(self$2):
