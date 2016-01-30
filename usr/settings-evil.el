@@ -30,6 +30,7 @@
 
 (define-key evil-normal-state-map "gf" 'ido-find-file)
 (define-key evil-normal-state-map "gF" 'evil-find-file-at-point-with-line)
+(define-key evil-normal-state-map "gr" 'recentf-open-files)
 (define-key evil-normal-state-map "gD" 'dired-jump)
 (define-key evil-normal-state-map "gs" 'shell)
 (define-key evil-normal-state-map "gb" 'ido-switch-buffer)
@@ -38,9 +39,12 @@
 (define-key evil-normal-state-map "zC" 'evil-close-folds)
 (define-key evil-normal-state-map "z+" 'ispell-buffer) ; Shift-=
 
+(evil-ex-define-cmd "r[ecent]" 'recentf-open-files)
+(evil-ex-define-cmd "o[pen]" 'ido-find-file)
 (evil-ex-define-cmd "wk" 'my-buffer-write-kill)
 (evil-ex-define-cmd "wc" 'my-buffer-write-close)
 (evil-ex-define-cmd "k[ill]" 'kill-this-buffer)
+(evil-ex-define-cmd "ko" 'my-kill-other-buffer)
 (evil-ex-define-cmd "g[it]" 'magit-status)
 
 (provide 'settings-evil)

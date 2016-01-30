@@ -20,6 +20,10 @@
                   (interactive)
                   (magit-status)))
 
+;; Use the clipboard when I want to
+(global-set-key (kbd "C-c v") 'clipboard-yank)
+(global-set-key (kbd "C-c c") 'clipboard-kill-ring-save)
+
 ;; expand-region
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)

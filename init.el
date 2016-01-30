@@ -43,9 +43,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'settings-prog-mode)
-(require 'sclang)                       ; enable the mode
-(add-hook 'sclang-mode
-  (lambda () (load-library "settings-sclang")))
+(require 'settings-sclang)
 
 (require 'settings-python)
 (require 'settings-elisp)
