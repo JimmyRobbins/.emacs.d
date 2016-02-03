@@ -5,7 +5,9 @@ games
 /smex-items
 /ac-comphist.dat
 *~
+*#
 *.elc
 *.DS_Store
 /.places
 /recentf
+/ido.last
