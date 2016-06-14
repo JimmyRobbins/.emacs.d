@@ -14,6 +14,9 @@
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+;; Typing special characters
+(define-key key-translation-map (kbd "M-_") (kbd "—"))
+
 ;; Make magit easier to launch
 (global-set-key (kbd "C-c m")
                 (lambda ()

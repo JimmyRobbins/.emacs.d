@@ -16,6 +16,9 @@
 ;; Occasionally default to emacs state
 ;; (evil-set-initial-state 'shell-mode 'emacs)
 (evil-set-initial-state 'help-mode 'emacs)
+(evil-set-initial-state 'xkcd-mode 'emacs)
+(evil-set-initial-state 'cider-stacktrace-mode 'emacs)
+
 
 ;;;;;;;;;;;;;;;;;;
 ;; Key-bindings ;;
@@ -45,6 +48,7 @@
 (evil-ex-define-cmd "wc" 'my-buffer-write-close)
 (evil-ex-define-cmd "k[ill]" 'kill-this-buffer)
 (evil-ex-define-cmd "ko" 'my-kill-other-buffer)
+(evil-ex-define-cmd "Q" 'save-buffers-kill-emacs)
 (evil-ex-define-cmd "g[it]" 'magit-status)
 
 (provide 'settings-evil)

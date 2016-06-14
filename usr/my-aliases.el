@@ -2,5 +2,6 @@
 
 
 (defalias 'toggle-monospace 'variable-pitch-mode)
+(defalias 'word-wrap 'visual-line-mode)
 
 (provide 'my-aliases)
