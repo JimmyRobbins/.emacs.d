@@ -48,6 +48,8 @@
 (require 'settings-python)
 (require 'settings-elisp)
 
+(require 'settings-org)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting useful parameters ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
