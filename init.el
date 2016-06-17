@@ -42,13 +42,13 @@
 ;; Modes associated with certain file types: ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(with-eval-after-load 'python (require 'settings-python))
+(with-eval-after-load 'lisp-mode (require 'settings-elisp))
+(with-eval-after-load 'org (require 'settings-org))
+
 (require 'settings-prog-mode)
 (require 'settings-sclang)
 
-(require 'settings-python)
-(require 'settings-elisp)
-
-(require 'settings-org)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting useful parameters ;;
