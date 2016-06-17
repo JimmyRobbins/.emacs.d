@@ -1,6 +1,12 @@
 ;; My settings for editing python files
 
+
+(when is-mac
+  (require 'exec-path-from-shell)
+  (exec-path-from-shell-initialize))
+
 (elpy-enable)
+(elpy-use-ipython)
 
 (defun my-python-mode-hook ()
   (setq fill-column 80)

@@ -49,6 +49,8 @@
 (evil-ex-define-cmd "k[ill]" 'kill-this-buffer)
 (evil-ex-define-cmd "ko" 'my-kill-other-buffer)
 (evil-ex-define-cmd "Q" 'save-buffers-kill-emacs)
+
 (evil-ex-define-cmd "g[it]" 'magit-status)
+(evil-ex-define-cmd "words" 'count-words)
 
 (provide 'settings-evil)
