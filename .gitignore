@@ -2,6 +2,7 @@ backups
 .tutor
 auto-save-list
 games
+elpa/
 /smex-items
 /ac-comphist.dat
 *~
