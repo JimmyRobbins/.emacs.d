@@ -11,7 +11,6 @@
 ;; Loading Elisp files ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(package-initialize)
 (add-to-list 'load-path "~/.emacs.d/usr")
 (add-to-list 'load-path "~/.emacs.d/elpa")
 (add-to-list 'load-path "~/.emacs.d/SuperCollider")
@@ -57,9 +56,6 @@
 ;; Macify!
 (if is-mac
   (require 'mac))
-
-;; See all ELPA packages
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
 ;; Put all backups into one place
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
