@@ -24,10 +24,10 @@
     fill-column-indicator
     find-file-in-project
     flycheck
+    flx-ido
     ido-ubiquitous
     ido-vertical-mode
     jedi
-    jedi-direx
     magit
     multiple-cursors
     rainbow-delimiters
