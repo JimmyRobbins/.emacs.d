@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "xkcd" "xkcd.el" (22363 5288 0 0))
+;;;### (autoloads nil "xkcd" "xkcd.el" (22371 28006 0 0))
 ;;; Generated autoloads from xkcd.el
 
 (autoload 'xkcd-mode "xkcd" "\
@@ -22,10 +22,6 @@ Get the latest xkcd.
 \(fn)" t nil)
 
 (defalias 'xkcd 'xkcd-get-latest)
-
-;;;***
-
-;;;### (autoloads nil nil ("xkcd-pkg.el") (22363 5288 536019 0))
 
 ;;;***
 
