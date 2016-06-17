@@ -1,8 +1,9 @@
-;; Handling packages
+;; automatically install uninstalled packages
 
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(package-initialize)
 
 (defvar my-packages
   '(auto-complete
@@ -45,8 +46,11 @@
 
 
 (defun install-all-missing-packages ()
-  (mapc (unless (package-installed-p package)
-          (package-install package))
-        'my-packages))
+  (mapc (lambda (package)
+	  (unless (package-installed-p package)
+	    (package-install package)))
+	my-packages))
 
 (unless (all-packages-installed-p) (install-all-missing-packages))
+
+(provide 'my-packages)

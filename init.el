@@ -19,6 +19,7 @@
 ;; Setup Extensions ;;
 ;;;;;;;;;;;;;;;;;;;;;;
 
+(require 'my-packages)
 
 ;; Always on
 (require 'cosmetics)
