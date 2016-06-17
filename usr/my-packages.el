@@ -47,10 +47,20 @@
 
 (defun install-all-missing-packages ()
   (mapc (lambda (package)
-	  (unless (package-installed-p package)
-	    (package-install package)))
-	my-packages))
+          (unless (package-installed-p package)
+            (progn
+              (print (format "installing %s" package))
+              (package-install package))))
+        my-packages))
 
 (unless (all-packages-installed-p) (install-all-missing-packages))
+
+;; remind me to add packages to my list when I install them
+(defadvice package-install (after propmt-to-edit-my-settings)
+  (if (y-or-n-p "Edit .../my-packages.el ? ")
+      (progn
+        (find-file "~/.emacs.d/usr/my-packages.el")
+        (beginning-of-buffer)
+        (search-forward "my-packages"))))
 
 (provide 'my-packages)
