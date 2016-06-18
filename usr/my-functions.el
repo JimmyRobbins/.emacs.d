@@ -45,5 +45,14 @@ but still doesn't quit emacs if it's on the last window"
   (interactive)
   (switch-to-buffer "*scratch*"))
 
+(defun my-visit-file-at-point-in-dired ()
+  "Go to the file at point in Dired"
+  (interactive)
+  (evil-find-file-at-point-with-line)
+  (let ((target-directory (file-name-directory (buffer-file-name))))
+    (kill-buffer)
+    (find-file target-directory))
+  )
+
 
 (provide 'my-functions)

@@ -58,6 +58,8 @@
 (if is-mac
   (require 'mac))
 
+;; Used dired-x
+(require 'dired-x)
 ;; Put all backups into one place
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 (setq vc-make-backup-files t)

@@ -1,14 +1,14 @@
 ;; Settings for writing Emacs-Lisp
 
-;; go to function definition with M-. and back again with M-,
-(require 'elisp-slime-nav)
-(require 'paredit)
 
 (defun my-emacs-lisp-mode-hook ()
   (progn)
   (elisp-slime-nav-mode t)
+    ;; go to function definition with M-. and back again with M-,
   (enable-paredit-mode)
-  (eldoc-mode))
+  (eldoc-mode)
+  (prettify-symbols-mode))
+
 
 (add-hook 'emacs-lisp-mode-hook 'my-emacs-lisp-mode-hook)
 
@@ -28,6 +28,6 @@
       (paredit-forward-slurp-sexp))))
 
 ;;; paredit keybindings
-(define-key paredit-mode-map (kbd "C-M-\)") 'slurp-all-the-way-forward)
+;; (define-key paredit-mode-map (kbd "C-M-\)") 'slurp-all-the-way-forward)
 
 (provide 'settings-elisp)

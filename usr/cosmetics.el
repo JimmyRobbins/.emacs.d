@@ -6,6 +6,8 @@
 ;; Font
 (set-face-attribute 'default nil :height 150)
 (set-face-attribute 'default nil :family "Inconsolata")
+(set-fontset-font "fontset-default" '(?λ. ?λ)
+		  (font-spec :name "DajaVu Sans Mono"))
 
 ;; Get rid of extra whitespace every-time we save
 (add-hook 'before-save-hook 'whitespace-cleanup)
@@ -13,6 +15,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Get rid of visual clutter ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (setq inhibit-startup-message t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -20,16 +23,23 @@
 
 ;; Diminish the mode line
 (require 'diminish)
-(diminish 'yas-minor-mode)
-(diminish 'undo-tree-mode)
-(diminish 'hs-minor-mode)
-(diminish 'column-enforce-mode)
-(diminish 'paredit-mode)
-(diminish 'elsip-slime-nav-mode)
-(diminish 'auto-revert-mode)
-(diminish 'rainbow-delimiters-mode)
-(diminish 'rainbow-mode)
-(diminish 'eldoc-mode)
+(defvar modes-to-diminish
+  '("yas-minor-mode"
+    "undo-tree-mode"
+    "hs-minor-mode"
+    "column-enforce-mode"
+    "paredit-mode"
+    "elsip-slime-nav-mode"
+    "auto-revert-mode"
+    "rainbow-mode"
+    "eldoc-mode"
+    "rainbow-delimiters-mode")
+  "Packages to diminish when they load")
+
+(mapc (lambda (mode)
+	(with-eval-after-load 'mode
+	  (diminish mode)))
+      modes-to-diminish)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add visual clutter ;;
