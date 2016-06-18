@@ -32,6 +32,7 @@
     magit
     multiple-cursors
     rainbow-delimiters
+    rainbow-mode
     sclang-extensions
     smart-mode-line
     smex
