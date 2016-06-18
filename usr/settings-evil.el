@@ -12,6 +12,8 @@
 (require 'evil-matchit)
 (global-evil-matchit-mode 1)
 
+(add-hook 'paredit-mode-hook 'evil-paredit-mode)
+
 
 ;; Occasionally default to emacs state
 ;; (evil-set-initial-state 'shell-mode 'emacs)
@@ -51,6 +53,8 @@
 (evil-ex-define-cmd "ko" 'my-kill-other-buffer)
 (evil-ex-define-cmd "Q" 'save-buffers-kill-emacs)
 (evil-ex-define-cmd "save" 'save-some-buffers)
+
+(evil-ex-define-cmd "scr[atch]" 'my-switch-to-scratch)
 
 (evil-ex-define-cmd "g[it]" 'magit-status)
 (evil-ex-define-cmd "words" 'count-words)

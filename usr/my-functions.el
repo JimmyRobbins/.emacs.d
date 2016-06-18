@@ -11,10 +11,11 @@
 (defun my-bell-flash-orange ()
   "A Visual bell function, flashes the screen momentarily"
   (interactive)
-  (setq original-bg-color (face-attribute 'default :background))
-  (set-face-background 'default "#cb4b16")
-  (sleep-for 0.025)
-  (set-face-background 'default original-bg-color))
+  (let ((original-bg-color (face-attribute 'default :background)))
+    (progn
+      (set-face-background 'default "#cb4b16")
+      (sleep-for 0.05)
+      (set-face-background 'default original-bg-color))))
 
 (setq visible-bell 1)
 (setq ring-bell-function 'my-bell-flash-orange)
@@ -38,6 +39,11 @@ but still doesn't quit emacs if it's on the last window"
   (other-window 1)
   (kill-this-buffer)
   (other-window -1))
+
+(defun my-switch-to-scratch ()
+  "Switch to the scratch buffer"
+  (interactive)
+  (switch-to-buffer "*scratch*"))
 
 
 (provide 'my-functions)

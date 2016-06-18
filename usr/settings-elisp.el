@@ -4,7 +4,9 @@
 (require 'elisp-slime-nav)
 
 (defun my-emacs-lisp-mode-hook ()
-  (elisp-slime-nav-mode t))
+  (elisp-slime-nav-mode t)
+  (enable-paredit-mode))
+
 
 (add-hook 'emacs-lisp-mode-hook 'my-emacs-lisp-mode-hook)
 

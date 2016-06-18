@@ -18,6 +18,7 @@
     elpy
     evil
     evil-matchit
+    evil-paredit
     evil-surround
     exec-path-from-shell
     expand-region
