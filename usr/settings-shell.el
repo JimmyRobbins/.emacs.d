@@ -7,10 +7,6 @@
 
 (global-hl-line-unhighlight)
 
-(defun my-shell-clear ()
-  (interactive)
-  (let ((comint-buffer-maximum-size 0))
-    (comint-truncate-buffer)))
 
 
 (define-key shell-mode-map (kbd "C-l") 'my-shell-clear)

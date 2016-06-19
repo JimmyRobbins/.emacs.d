@@ -38,6 +38,7 @@
     smex
     solarized-theme
     undo-tree
+    unicode-fonts
     w3m
     xkcd
     yasnippet)

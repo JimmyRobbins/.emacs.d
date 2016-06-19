@@ -6,8 +6,8 @@
 ;; Font
 (set-face-attribute 'default nil :height 150)
 (set-face-attribute 'default nil :family "Inconsolata")
-(set-fontset-font "fontset-default" '(?λ. ?λ)
-		  (font-spec :name "DajaVu Sans Mono"))
+(require 'unicode-fonts)
+;; (unicode-fonts-setup)
 
 ;; Get rid of extra whitespace every-time we save
 (add-hook 'before-save-hook 'whitespace-cleanup)
@@ -37,8 +37,8 @@
   "Packages to diminish when they load")
 
 (mapc (lambda (mode)
-	(with-eval-after-load 'mode
-	  (diminish mode)))
+        (with-eval-after-load 'mode
+          (diminish mode)))
       modes-to-diminish)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
@@ -112,21 +112,21 @@
 
   ;; General purpose colors
 (set-face-attribute 'show-paren-match nil
-		    :background blue
-		    :foreground s-base02)
+                    :background blue
+                    :foreground s-base02)
 (set-face-attribute 'show-paren-mismatch nil :background red)
 
 ;; Font lock faces
 (set-face-attribute 'font-lock-constant-face nil
-		    :weight 'normal)
+                    :weight 'normal)
 (set-face-attribute 'font-lock-comment-face nil
-		    :slant 'italic)
+                    :slant 'italic)
 
 
 (with-eval-after-load 'column-enforce-mode
   (set-face-attribute 'column-enforce-face nil
-		      :background red
-		      :foreground s-base2))
+                      :background red
+                      :foreground s-base2))
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; Shell Mode Colors ;;
@@ -135,9 +135,9 @@
 
 (with-eval-after-load 'comint
   (set-face-attribute 'comint-highlight-prompt nil
-		      :foreground green)
+                      :foreground green)
   (set-face-attribute 'comint-highlight-input nil
-		      :foreground s-base01))
+                      :foreground s-base01))
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Mode line colors ;;

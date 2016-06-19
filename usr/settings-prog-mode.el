@@ -6,7 +6,8 @@
   (column-enforce-mode)
   (diminish 'column-enforce-mode)
   (hs-minor-mode)
-  (column-enforce-mode))
+  (column-enforce-mode)
+  (electric-pair-mode 1))
 
 (add-hook 'prog-mode-hook 'my-prog-mode-hook)
 

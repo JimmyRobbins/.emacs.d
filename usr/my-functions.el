@@ -20,6 +20,12 @@
 (setq visible-bell 1)
 (setq ring-bell-function 'my-bell-flash-orange)
 
+(defun my-shell-clear ()
+  "Clear the shell screen and fix the prompt if it's been \"stringified\""
+  (interactive)
+  (let ((comint-buffer-maximum-size 0))
+    (comint-truncate-buffer)))
+
 (defun my-buffer-write-kill ()
   "Save the buffer and then kill, written as a replacement for :wq in evil"
   (interactive)
