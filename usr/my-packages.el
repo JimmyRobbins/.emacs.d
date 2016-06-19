@@ -2,8 +2,8 @@
 
 (require 'package)
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
 (defvar my-packages
   '(auto-complete
@@ -39,7 +39,6 @@
     solarized-theme
     undo-tree
     unicode-fonts
-    w3m
     xkcd
     yasnippet)
   "My top level packages, ensure these are all installed upon launch")
@@ -49,6 +48,7 @@
 
 
 (defun install-all-missing-packages ()
+  (package-refresh-contents)
   (mapc (lambda (package)
           (unless (package-installed-p package)
             (progn
