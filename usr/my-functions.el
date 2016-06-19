@@ -1,5 +1,9 @@
 ;; Basic Functions defined and/or stolen by me
 
+;;;;;;;;;;;;;;;;;;;;
+;; Bell Functions ;;
+;;;;;;;;;;;;;;;;;;;;
+
 ;; A Visual bell that actually works
 (defun my-bell-invert-colors ()
   (interactive)
@@ -19,6 +23,10 @@
 
 (setq visible-bell 1)
 (setq ring-bell-function 'my-bell-flash-orange)
+
+;;;;;;;;;;;;;;;
+;; Utilities ;;
+;;;;;;;;;;;;;;;
 
 (defun my-shell-clear ()
   "Clear the shell screen and fix the prompt if it's been \"stringified\""
@@ -60,5 +68,19 @@ but still doesn't quit emacs if it's on the last window"
     (find-file target-directory))
   )
 
+;;;;;;;;;;;;;;;;
+;; For Coding ;;
+;;;;;;;;;;;;;;;;
+
+(defun my-evil-eval-and-print ()
+  "move to the end of the innermost sexp, evaluate it,
+and print the result to the buffer"
+  (interactive)
+  (evil-find-char-backward 1 ?\()
+  (evilmi-jump-items)
+  (end-of-line)
+  (evil-insert-state)
+  (eval-print-last-sexp)
+  (evil-normal-state))
 
 (provide 'my-functions)

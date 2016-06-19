@@ -2,9 +2,8 @@
 
 
 (defun my-emacs-lisp-mode-hook ()
-  (progn)
+  ;; go to function definition with M-. and back again with M-,
   (elisp-slime-nav-mode t)
-    ;; go to function definition with M-. and back again with M-,
   (enable-paredit-mode)
   (eldoc-mode)
   (prettify-symbols-mode))
@@ -22,9 +21,9 @@
   (catch 'done
     (while (not (eobp))
       (save-excursion
-	(paredit-forward-up)
-	(if (eq (char-after) ?\) )
-	    (throw 'done t)))
+        (paredit-forward-up)
+        (if (eq (char-after) ?\) )
+            (throw 'done t)))
       (paredit-forward-slurp-sexp))))
 
 ;;; paredit keybindings

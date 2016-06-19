@@ -55,6 +55,7 @@
 (evil-ex-define-cmd "Q" 'save-buffers-kill-emacs)
 (evil-ex-define-cmd "save" 'save-some-buffers)
 
+(evil-ex-define-cmd "eval" 'my-evil-eval-and-print)
 (evil-ex-define-cmd "scr[atch]" 'my-switch-to-scratch)
 
 (evil-ex-define-cmd "g[it]" 'magit-status)

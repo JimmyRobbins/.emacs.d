@@ -7,7 +7,7 @@
 (set-face-attribute 'default nil :height 150)
 (set-face-attribute 'default nil :family "Inconsolata")
 (require 'unicode-fonts)
-;; (unicode-fonts-setup)
+(unicode-fonts-setup)
 
 ;; Get rid of extra whitespace every-time we save
 (add-hook 'before-save-hook 'whitespace-cleanup)
@@ -23,23 +23,40 @@
 
 ;; Diminish the mode line
 (require 'diminish)
-(defvar modes-to-diminish
-  '("yas-minor-mode"
-    "undo-tree-mode"
-    "hs-minor-mode"
-    "column-enforce-mode"
-    "paredit-mode"
-    "elsip-slime-nav-mode"
-    "auto-revert-mode"
-    "rainbow-mode"
-    "eldoc-mode"
-    "rainbow-delimiters-mode")
-  "Packages to diminish when they load")
 
-(mapc (lambda (mode)
-        (with-eval-after-load 'mode
-          (diminish mode)))
-      modes-to-diminish)
+(with-eval-after-load "flycheck"
+  (diminish 'flycheck-mode))
+
+(with-eval-after-load "yasnippet"
+  (diminish 'yas-minor-mode))
+
+(with-eval-after-load "undo-tree"
+  (diminish 'undo-tree-mode))
+
+(with-eval-after-load "hideshow"
+  (diminish 'hs-minor-mode))
+
+(with-eval-after-load "column-enforce-mode"
+  (diminish 'column-enforce-mode))
+
+(with-eval-after-load "paredit"
+  (diminish 'paredit-mode))
+
+(with-eval-after-load "elisp-slime-nav"
+  (diminish 'elisp-slime-nav-mode))
+
+(with-eval-after-load "autorevert"
+  (diminish 'auto-revert-mode))
+
+(with-eval-after-load "rainbow-mode"
+  (diminish 'rainbow-mode))
+
+(with-eval-after-load "eldoc"
+  (diminish 'eldoc-mode))
+
+(with-eval-after-load "rainbow-delimiters"
+  (diminish 'rainbow-delimiters-mode))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add visual clutter ;;
