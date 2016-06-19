@@ -59,11 +59,17 @@
 (unless (all-packages-installed-p) (install-all-missing-packages))
 
 ;; remind me to add packages to my list when I install them
-(defadvice package-install (after propmt-to-edit-my-settings)
-  (if (y-or-n-p "Edit .../my-packages.el ? ")
-      (progn
-        (find-file "~/.emacs.d/usr/my-packages.el")
-        (beginning-of-buffer)
-        (search-forward "my-packages"))))
+(defun prompt-to-record-after-installing (orig-fun package-name)
+  (if (not (member package-name my-packages))
+      ;; prompt to add the package to my-packages file
+      (if (y-or-n-p (format "%s not in my-packages.el, add it ? " package-name))
+          (progn
+            (find-file "~/.emacs.d/usr/my-packages.el")
+            (goto-char (point-min))
+            (search-forward "my-packages"))))
+  orig-fun)
+
+(advice-add 'package-install :around #'prompt-to-record-after-installing)
+
 
 (provide 'my-packages)
