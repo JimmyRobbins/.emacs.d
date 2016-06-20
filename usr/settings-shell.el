@@ -8,7 +8,6 @@
 (global-hl-line-unhighlight)
 
 
-
 (define-key shell-mode-map (kbd "C-l") 'my-shell-clear)
 (define-key shell-mode-map (kbd "<tab>") 'hippie-expand)
 (define-key shell-mode-map (kbd "<up>") 'comint-previous-input)
