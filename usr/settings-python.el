@@ -6,6 +6,7 @@
   (require 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
+
 ;;; Use Elpy
 (elpy-enable)
 (defalias 'workon 'pyenv-workon)
@@ -13,9 +14,12 @@
 (setq elpy-rpc-backend "jedi")
 
 
-;;; warn when lines get too long
-(setq fill-column 80)
-(linum-mode t)
+(require 'projectile)
+(defun my-python-hook ()
+  (setq fill-column 80)
+  (linum-mode t))
+
+(add-hook 'python-mode-hook 'my-python-hook)
 
 
 ;;; Set up my keymaps

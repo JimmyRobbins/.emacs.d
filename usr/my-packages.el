@@ -29,8 +29,10 @@
     ido-ubiquitous
     ido-vertical-mode
     jedi
+    linum-relative
     magit
     multiple-cursors
+    projectile
     rainbow-delimiters
     rainbow-mode
     sclang-extensions
