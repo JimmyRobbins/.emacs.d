@@ -16,7 +16,6 @@
 
 
 ;; Occasionally default to emacs state
-;; (evil-set-initial-state 'shell-mode 'emacs)
 (evil-set-initial-state 'help-mode 'emacs)
 (evil-set-initial-state 'xkcd-mode 'emacs)
 (evil-set-initial-state 'cider-stacktrace-mode 'emacs)
@@ -47,11 +46,16 @@
 (evil-ex-define-cmd "r[ecent]" 'recentf-open-files)
 (evil-ex-define-cmd "o[pen]" 'ido-find-file)
 (evil-ex-define-cmd "dired" 'my-visit-file-at-point-in-dired)
+
 (evil-ex-define-cmd "wk" 'my-buffer-write-kill)
 (evil-ex-define-cmd "wc" 'my-buffer-write-close)
 (evil-ex-define-cmd "k" 'kill-this-buffer)
 (evil-ex-define-cmd "kill" 'ido-kill-buffer)
 (evil-ex-define-cmd "ko" 'my-kill-other-buffer)
+
+(evil-ex-define-cmd "vso" 'my-find-file-vertical-split)
+(evil-ex-define-cmd "vsb" 'my-find-buffer-vertical-split)
+
 (evil-ex-define-cmd "Q" 'save-buffers-kill-emacs)
 (evil-ex-define-cmd "save" 'save-some-buffers)
 
@@ -60,5 +64,6 @@
 
 (evil-ex-define-cmd "g[it]" 'magit-status)
 (evil-ex-define-cmd "words" 'count-words)
+
 
 (provide 'settings-evil)

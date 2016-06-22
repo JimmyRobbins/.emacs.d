@@ -65,9 +65,31 @@ but still doesn't quit emacs if it's on the last window"
   (evil-find-file-at-point-with-line)
   (let ((target-directory (file-name-directory (buffer-file-name))))
     (kill-buffer)
-    (find-file target-directory))
-  )
+    (find-file target-directory)))
 
+(defun current-window-split-vertical-p ()
+  "Tests whether the current window is split vertically"
+  (if (or (window-in-direction 'right)
+          (window-in-direction 'left))
+      t
+    nil))
+
+(defun my-find-file-vertical-split ()
+  "Find a file, then open it in a vertically slit window,
+opening a new one if necessary"
+  (interactive)
+  (if (current-window-split-vertical-p)
+      (evil-window-vsplit))
+  (ido-find-file-other-window))
+
+(defun my-find-buffer-vertical-split ()
+  "Find a file, then open it in a vertically slit window,
+opening a new one if necessary"
+  (interactive)
+  (if (current-window-split-vertical-p)
+      (evil-window-vsplit))
+  (other-buffer)
+  (ido-switch-buffer))
 ;;;;;;;;;;;;;;;;
 ;; For Coding ;;
 ;;;;;;;;;;;;;;;;
@@ -82,5 +104,11 @@ and print the result to the buffer"
   (evil-insert-state)
   (eval-print-last-sexp)
   (evil-normal-state))
+
+(defun show-relative-lines-and-wait-for-input ()
+  (interactive)
+  (linum-relative-on)
+  (sit-for 5)
+  (linum-relative-off))
 
 (provide 'my-functions)
