@@ -24,38 +24,41 @@
 ;; Diminish the mode line
 (require 'diminish)
 
-(with-eval-after-load "flycheck"
-  (diminish 'flycheck-mode))
-
-(with-eval-after-load "yasnippet"
-  (diminish 'yas-minor-mode))
-
-(with-eval-after-load "undo-tree"
-  (diminish 'undo-tree-mode))
-
-(with-eval-after-load "hideshow"
-  (diminish 'hs-minor-mode))
+(with-eval-after-load "autorevert"
+  (diminish 'auto-revert-mode))
 
 (with-eval-after-load "column-enforce-mode"
   (diminish 'column-enforce-mode))
 
-(with-eval-after-load "paredit"
-  (diminish 'paredit-mode))
+(with-eval-after-load "eldoc"
+  (diminish 'eldoc-mode))
 
 (with-eval-after-load "elisp-slime-nav"
   (diminish 'elisp-slime-nav-mode))
 
-(with-eval-after-load "autorevert"
-  (diminish 'auto-revert-mode))
+(with-eval-after-load "flycheck"
+  (diminish 'flycheck-mode))
+
+(with-eval-after-load "hideshow"
+  (diminish 'hs-minor-mode))
+
+(with-eval-after-load "paredit"
+  (diminish 'paredit-mode))
+
+(with-eval-after-load "projectile"
+  (diminish 'projectile-mode "proj"))
+
+(with-eval-after-load "rainbow-delimiters"
+  (diminish 'rainbow-delimiters-mode))
 
 (with-eval-after-load "rainbow-mode"
   (diminish 'rainbow-mode))
 
-(with-eval-after-load "eldoc"
-  (diminish 'eldoc-mode))
+(with-eval-after-load "undo-tree"
+  (diminish 'undo-tree-mode))
 
-(with-eval-after-load "rainbow-delimiters"
-  (diminish 'rainbow-delimiters-mode))
+(with-eval-after-load "yasnippet"
+  (diminish 'yas-minor-mode))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
@@ -77,8 +80,8 @@
 
 ;; Rainbow Mode
 (require 'rainbow-mode)
-(setq rainbow-x-colors nil)
 (rainbow-mode)
+(setq rainbow-x-colors nil) ; don't colorize names like "red"
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Change Colors about a bit ;;
@@ -88,16 +91,11 @@
 (defmacro with-solarized-color-names (&rest code)
   `(let ((s-base03    "#002b36")
          (s-base02    "#073642")
-         ;; emphasized content
          (s-base01    "#586e75")
-         ;; primary content
          (s-base00    "#657b83")
          (s-base0     "#839496")
-         ;; comments
          (s-base1     "#93a1a1")
-         ;; background highlight light
          (s-base2     "#eee8d5")
-         ;; background light
          (s-base3     "#fdf6e3")
 
          ;; Solarized accented colors
