@@ -54,6 +54,11 @@ but still doesn't quit emacs if it's on the last window"
   (kill-this-buffer)
   (other-window -1))
 
+(defun my-kill-all-other-buffers ()
+  (interactive)
+  (let ((other-buffers (delq (current-buffer) (buffer-list))))
+    (mapc 'kill-buffer other-buffers)))
+
 (defun my-switch-to-scratch ()
   "Switch to the scratch buffer"
   (interactive)

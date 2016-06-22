@@ -68,6 +68,11 @@
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/.places")
 
+;; immortalize scratch buffer, so it'll always be there to keep me company
+(require 'unkillable-scratch)
+(unkillable-scratch)
+(setq unkillable-scratch-behavior 'bury)
+
 ;; Use UTF-8
 (prefer-coding-system 'utf-8)
 
