@@ -7,9 +7,6 @@
 
 (defvar my-packages
   '(auto-complete
-    cider
-    clojure-mode
-    clojure-mode-extra-font-locking
     color-theme
     column-enforce-mode
     company
@@ -41,6 +38,7 @@
     solarized-theme
     undo-tree
     unicode-fonts
+    unkillable-scratch
     xkcd
     yasnippet)
   "My top level packages, ensure these are all installed upon launch")
@@ -60,6 +58,11 @@
 
 (unless (all-packages-installed-p) (install-all-missing-packages))
 
+;;;;;;;;;;;;;;;
+;; Prompting ;;
+;;;;;;;;;;;;;;;
+
+;;; Prompt me to update this file whenever I install or delete a package
 (defun prompt-to-record-after-installing (package-name)
   (if (not (member package-name my-packages))
       ;; prompt to add the package to my-packages file
@@ -83,6 +86,17 @@
               (search-forward "my-packages"))))))
 
 (advice-add 'package-delete :after #'prompt-to-record-after-deleting)
+
+;;; Don't prompt me to edit if I'm just upgrading
+(defun silence-package-prompting (&rest args)
+  (advice-remove 'package-install 'prompt-to-record-after-installing)
+  (advice-remove 'package-delete 'prompt-to-record-after-deleting))
+(advice-add 'package-menu-mark-upgrades :after 'silence-package-prompting)
+
+(defun resume-package-prompting (&rest args)
+  (advice-add 'package-install :after 'prompt-to-record-after-installing)
+  (advice-add 'package-delete :after 'prompt-to-record-after-deleting))
+(advice-add 'package-menu-execute :before 'resume-package-prompting)
 
 
 (provide 'my-packages)
