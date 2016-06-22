@@ -47,7 +47,6 @@
 (with-eval-after-load 'org (require 'settings-org))
 
 (require 'settings-prog-mode)
-(require 'settings-sclang)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
