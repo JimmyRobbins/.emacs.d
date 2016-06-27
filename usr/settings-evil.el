@@ -18,8 +18,6 @@
 ;; Occasionally default to emacs state
 (evil-set-initial-state 'help-mode 'emacs)
 (evil-set-initial-state 'xkcd-mode 'emacs)
-(evil-set-initial-state 'cider-stacktrace-mode 'emacs)
-
 
 ;;;;;;;;;;;;;;;;;;
 ;; Key-bindings ;;
@@ -51,6 +49,7 @@
 (evil-ex-define-cmd "wc" 'my-buffer-write-close)
 (evil-ex-define-cmd "k" 'kill-this-buffer)
 (evil-ex-define-cmd "kill" 'ido-kill-buffer)
+(evil-ex-define-cmd "killall" 'my-kill-all-other-buffers)
 (evil-ex-define-cmd "ko" 'my-kill-other-buffer)
 
 (evil-ex-define-cmd "vso" 'my-find-file-vertical-split)

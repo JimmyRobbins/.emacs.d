@@ -59,6 +59,14 @@ but still doesn't quit emacs if it's on the last window"
   (let ((other-buffers (delq (current-buffer) (buffer-list))))
     (mapc 'kill-buffer other-buffers)))
 
+(defun my-kill-all-dired-buffers ()
+  (interactive)
+  (mapc (lambda (buffer)
+          (when (eq (buffer-local-value 'major-mode buffer)
+                    'dired-mode)
+            (kill-buffer buffer)))
+        (buffer-list)))
+
 (defun my-switch-to-scratch ()
   "Switch to the scratch buffer"
   (interactive)
@@ -83,18 +91,24 @@ but still doesn't quit emacs if it's on the last window"
   "Find a file, then open it in a vertically slit window,
 opening a new one if necessary"
   (interactive)
-  (if (current-window-split-vertical-p)
+  (if (not (current-window-split-vertical-p))
       (evil-window-vsplit))
-  (ido-find-file-other-window))
+  (if (window-in-direction 'right)
+      (evil-window-right 1)
+    (evil-window-left 1))
+  (ido-find-file))
 
 (defun my-find-buffer-vertical-split ()
   "Find a file, then open it in a vertically slit window,
 opening a new one if necessary"
   (interactive)
-  (if (current-window-split-vertical-p)
+  (if (not (current-window-split-vertical-p))
       (evil-window-vsplit))
-  (other-buffer)
+  (if (window-in-direction 'right)
+      (evil-window-right 1)
+    (evil-window-left 1))
   (ido-switch-buffer))
+
 ;;;;;;;;;;;;;;;;
 ;; For Coding ;;
 ;;;;;;;;;;;;;;;;
@@ -110,10 +124,6 @@ and print the result to the buffer"
   (eval-print-last-sexp)
   (evil-normal-state))
 
-(defun show-relative-lines-and-wait-for-input ()
-  (interactive)
-  (linum-relative-on)
-  (sit-for 5)
-  (linum-relative-off))
+
 
 (provide 'my-functions)
