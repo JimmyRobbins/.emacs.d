@@ -15,6 +15,7 @@
     elpy
     evil
     evil-matchit
+    evil-numbers
     evil-paredit
     evil-surround
     exec-path-from-shell

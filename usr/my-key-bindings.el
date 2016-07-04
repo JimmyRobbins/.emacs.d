@@ -37,11 +37,9 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; Moving around windows with C-arrows
-(global-set-key [C-M-left] 'windmove-left)
-(global-set-key [C-M-right] 'windmove-right)
-(global-set-key [C-M-up] 'windmove-up)
-(global-set-key [C-M-down] 'windmove-down)
+;; Evil-numbers
+(global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
 
 (global-set-key (kbd "C-x M-k") 'my-kill-other-buffer)
 

@@ -125,5 +125,4 @@ and print the result to the buffer"
   (evil-normal-state))
 
 
-
 (provide 'my-functions)
