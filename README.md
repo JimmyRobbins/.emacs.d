@@ -11,7 +11,4 @@ custom.el
 ## Directories
 
 /usr
--- Contains my configuration code that I moved out of init.el, for sanity reasons
-
-/SuperCollider
--- files used by SuperCollider mode
+-- Contains my configuration code that I moved out of init.el, for clarity, and to make myself feel smart
