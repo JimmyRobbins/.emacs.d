@@ -76,6 +76,23 @@
               (search-forward "my-packages"))))))
 
 (advice-add 'package-install :after #'prompt-to-record-after-installing)
+<<<<<<< HEAD
+=======
+
+(defun prompt-to-record-after-deleting (pkg-desc)
+  (when (called-interactively-p 'any)
+    (let ((package-name (package-desc-name pkg-desc)))
+      (if (member package-name my-packages)
+          ;; prompt to remove the package from my-packages file
+          (if (y-or-n-p
+               (format "%s is in my-packages.el, remove it ?" package-name))
+              (progn
+                (find-file "~/.emacs.d/usr/my-packages.el")
+                (goto-char (point-min))
+                (search-forward "my-packages")))))))
+
+(advice-add 'package-delete :after #'prompt-to-record-after-deleting)
+>>>>>>> f4344ed67aaed01e7ecb56355f412ffd97f87772
 
 (defun prompt-to-record-after-deleting (pkg-desc)
   (when (called-interactively-p 'any)
