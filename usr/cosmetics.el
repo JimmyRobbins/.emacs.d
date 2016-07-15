@@ -76,7 +76,8 @@
 (require 'solarized)
 
 (setq solarized-use-less-bold t)
-(load-theme 'solarized-dark t)
+(if window-system
+    (load-theme 'solarized-dark t))
 
 ;; Rainbow Mode
 (require 'rainbow-mode)
