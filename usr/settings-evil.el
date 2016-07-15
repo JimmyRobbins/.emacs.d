@@ -55,7 +55,7 @@
 (evil-ex-define-cmd "vso" 'my-find-file-vertical-split)
 (evil-ex-define-cmd "vsb" 'my-find-buffer-vertical-split)
 
-(evil-ex-define-cmd "Q" 'save-buffers-kill-emacs)
+(evil-ex-define-cmd "Q" 'save-buffers-kill-terminal)
 (evil-ex-define-cmd "save" 'save-some-buffers)
 
 (evil-ex-define-cmd "eval" 'my-evil-eval-and-print)
