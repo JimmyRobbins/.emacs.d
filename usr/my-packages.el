@@ -1,8 +1,8 @@
 ;; automatically install uninstalled packages
 
+(package-initialize)
 (require 'package)
 
-(package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
 (defvar my-packages
