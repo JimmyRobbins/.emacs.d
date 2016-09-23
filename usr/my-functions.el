@@ -109,6 +109,11 @@ opening a new one if necessary"
     (evil-window-left 1))
   (ido-switch-buffer))
 
+(defun my-set-buffer-width-to-80 ()
+  "Sets the width of the current buffer to 80"
+  (interactive)
+  (evil-window-set-width 80))
+
 ;;;;;;;;;;;;;;;;
 ;; For Coding ;;
 ;;;;;;;;;;;;;;;;

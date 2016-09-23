@@ -55,6 +55,8 @@
 (evil-ex-define-cmd "vso" 'my-find-file-vertical-split)
 (evil-ex-define-cmd "vsb" 'my-find-buffer-vertical-split)
 
+(evil-ex-define-cmd "wide" 'my-set-buffer-width-to-80)
+
 (evil-ex-define-cmd "Q" 'save-buffers-kill-emacs)
 (evil-ex-define-cmd "save" 'save-some-buffers)
 

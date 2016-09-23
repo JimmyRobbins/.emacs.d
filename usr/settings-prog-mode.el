@@ -5,8 +5,7 @@
 (defun my-prog-mode-hook ()
   (projectile-mode)
   (hs-minor-mode)
-  (column-enforce-mode)
-  (electric-pair-mode 1))
+  (column-enforce-mode))
 
 (add-hook 'prog-mode-hook 'my-prog-mode-hook)
 

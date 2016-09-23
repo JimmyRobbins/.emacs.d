@@ -14,11 +14,12 @@
  '(flycheck-pylintrc "~/.pylintrc")
  '(flycheck-python-pylint-executable
    "/opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/pylint")
- '(ispell-program-name "/opt/local/bin/aspell")
+ '(ispell-program-name "/usr/local/bin/aspell")
  '(mm-inline-large-images (quote resize))
  '(mouse-wheel-scroll-amount (quote (1)))
  '(ns-pop-up-frames nil)
- '(python-shell-exec-path (quote ("/opt/local/bin/")))
+ '(python-shell-exec-path (quote ("/usr/local/bin/")))
+ '(python-shell-interpreter "python3")
  '(scroll-bar-mode nil)
  '(text-scale-mode-step 1.1))
 (custom-set-faces
