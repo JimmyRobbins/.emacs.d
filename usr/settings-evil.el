@@ -57,7 +57,7 @@
 
 (evil-ex-define-cmd "wide" 'my-set-buffer-width-to-80)
 
-(evil-ex-define-cmd "Q" 'save-buffers-kill-emacs)
+(evil-ex-define-cmd "Q" 'save-buffers-kill-terminal)
 (evil-ex-define-cmd "save" 'save-some-buffers)
 
 (evil-ex-define-cmd "eval" 'my-evil-eval-and-print)
