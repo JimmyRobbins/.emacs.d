@@ -1,0 +1,4 @@
+* Plans for improvements and maintenance of my emacs
+
+*** TODO make comment delimiters (like #) italic like the comment face
+*** TODO bash competition in shell mode

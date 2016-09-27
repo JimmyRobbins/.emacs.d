@@ -87,6 +87,10 @@ but still doesn't quit emacs if it's on the last window"
       t
     nil))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Visual and Cosmetic Fuctions ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defun my-find-file-vertical-split ()
   "Find a file, then open it in a vertically slit window,
 opening a new one if necessary"
