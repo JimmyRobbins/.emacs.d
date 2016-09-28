@@ -44,12 +44,13 @@
 ;; Modes associated with certain file types: ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(with-eval-after-load 'python (require 'settings-python))
 (require 'settings-elisp)
-(require 'settings-org)
-(require 'settings-text)
-
 (require 'settings-prog-mode)
+
+(with-eval-after-load 'text (require 'settings-text))
+(with-eval-after-load 'python (require 'settings-python))
+(with-eval-after-load 'org (require 'settings-org))
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

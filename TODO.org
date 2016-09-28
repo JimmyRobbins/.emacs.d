@@ -1,4 +1,45 @@
+#+FILETAGS: :emacs:
+
 * Plans for improvements and maintenance of my emacs
 
-*** TODO make comment delimiters (like #) italic like the comment face
+*** TODO comment delimiters face
+    Only comment delimiters after a comment has begun are in italics,
+make it so the first one is italic too
+
 *** TODO bash competition in shell mode
+
+*** TODO setup smart-parens
+
+* DONE change some numbers in this table
+| heading 1    | heading 2 | heading 3 |
+|--------------+-----------+-----------|
+| <12>         |       <9> |           |
+| anything     |        14 |       301 |
+| supercalifragilisticexpialidocious |           |           |
+| easy         |       200 |        22 |
+| goes         |        18 |         1 |
+| name         |        12 |       250 |
+| the          |        61 |        18 |
+| winners      |       350 |        50 |
+| with         |        42 |        63 |
+|--------------+-----------+-----------|
+| total        |       697 |       705 |
+|--------------+-----------+-----------|
+| average      | this\vert{}that |           |
+
+
+* TODO Do this in a cooler way
+#+BEGIN_SRC python :results output
+  for i in range(4):
+      if i > 2:
+          excitement = '!'
+      else:
+          excitement = ''
+      print("I can count to {}{}".format((i**2), excitement))
+#+END_SRC
+
+#+RESULTS:
+: I can count to 0
+: I can count to 1
+: I can count to 4
+: I can count to 9!

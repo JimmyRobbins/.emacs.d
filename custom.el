@@ -18,6 +18,10 @@
  '(mm-inline-large-images (quote resize))
  '(mouse-wheel-scroll-amount (quote (1)))
  '(ns-pop-up-frames nil)
+ '(org-agenda-files (quote ("~/.emacs.d/TODO.org")))
+ '(org-agenda-restore-windows-after-quit 1)
+ '(org-enforce-todo-dependencies t)
+ '(org-src-fontify-natively t)
  '(package-selected-packages
    (quote
     (evil-smartparens xkcd web-mode unkillable-scratch unicode-fonts solarized-theme smex smartparens smart-mode-line sclang-extensions rainbow-mode rainbow-delimiters projectile package-utils multiple-cursors multi-web-mode magit linum-relative js2-mode jedi ido-vertical-mode ido-ubiquitous flycheck flx-ido fill-column-indicator expand-region exec-path-from-shell evil-surround evil-paredit evil-numbers evil-matchit elpy elisp-slime-nav disable-mouse diminish dash-at-point column-enforce-mode color-theme clojure-mode-extra-font-locking cider)))
