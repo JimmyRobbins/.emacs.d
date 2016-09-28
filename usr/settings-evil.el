@@ -18,6 +18,7 @@
 ;; Occasionally default to emacs state
 (evil-set-initial-state 'help-mode 'emacs)
 (evil-set-initial-state 'xkcd-mode 'emacs)
+(evil-set-initial-state 'info-mode 'emacs)
 
 ;;;;;;;;;;;;;;;;;;
 ;; Key-bindings ;;

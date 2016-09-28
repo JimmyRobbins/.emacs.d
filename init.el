@@ -5,6 +5,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+(package-initialize)
 
 (setq is-mac (equal system-type 'darwin))
 
@@ -36,6 +37,7 @@
 ;; On as soon as we need them
 (with-eval-after-load 'shell (require 'settings-shell))
 (with-eval-after-load 'magit (require 'settings-magit))
+(with-eval-after-load 'info (require 'settings-info))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
