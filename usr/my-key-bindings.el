@@ -18,14 +18,13 @@
 (define-key key-translation-map (kbd "M-_") (kbd "—"))
 
 ;; Make magit easier to launch
-(global-set-key (kbd "C-c m")
-                (lambda ()
-                  (interactive)
-                  (magit-status)))
-(global-set-key (kbd "C-c C-m")
-                (lambda ()
-                  (interactive)
-                  (magit-status)))
+(mapc (lambda (keyboard-string)
+        (global-set-key (kbd keyboard-string)
+                        (lambda ()
+                          (interactive)
+                          (magit-status))))
+      ;; sometimes I accidentally hold down control
+      '("C-c m" "C-c C-m"))
 
 ;; Use the clipboard when I want to
 (global-set-key (kbd "C-c v") 'clipboard-yank)
@@ -64,7 +63,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; use vim keys to move in packages
-
 (evil-add-hjkl-bindings package-menu-mode-map 'emacs
   "/" 'isearch-forward
   "?" 'isearch-backward)

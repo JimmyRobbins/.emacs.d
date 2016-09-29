@@ -52,7 +52,6 @@
 (with-eval-after-load 'org (require 'settings-org))
 
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setting useful parameters ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
