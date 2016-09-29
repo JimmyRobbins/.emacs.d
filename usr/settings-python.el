@@ -10,8 +10,9 @@
 ;;; Use Elpy
 (elpy-enable)
 (defalias 'workon 'pyenv-workon)
-;; (elpy-use-ipython)
+(elpy-use-ipython)
 (setq elpy-rpc-backend "jedi")
+(elpy-clean-modeline)
 
 
 (require 'projectile)

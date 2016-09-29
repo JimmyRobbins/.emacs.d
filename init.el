@@ -4,7 +4,6 @@
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Test text!!!
 
 (package-initialize)
 
@@ -98,6 +97,7 @@
 (setq apropos-do-all t)
 
 (setq load-prefer-newer t)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Put Customize code elsewhere ;;
