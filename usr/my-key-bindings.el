@@ -43,6 +43,12 @@
 
 (global-set-key (kbd "C-x M-k") 'my-kill-other-buffer)
 
+;;; Org global access keys
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c r") 'org-capture) ; "remember"
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c b") 'org-iswitchb)
+
 ;; Recent files
 (require 'recentf)
 (recentf-mode 1)
