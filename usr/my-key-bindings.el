@@ -22,6 +22,10 @@
                 (lambda ()
                   (interactive)
                   (magit-status)))
+(global-set-key (kbd "C-c C-m")
+                (lambda ()
+                  (interactive)
+                  (magit-status)))
 
 ;; Use the clipboard when I want to
 (global-set-key (kbd "C-c v") 'clipboard-yank)

@@ -2,7 +2,7 @@
 
 * Plans for improvements and maintenance of my emacs
 
-*** TODO comment delimiters face
+*** DONE comment delimiters face
     Only comment delimiters after a comment has begun are in italics,
 make it so the first one is italic too
 

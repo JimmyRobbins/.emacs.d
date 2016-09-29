@@ -19,7 +19,7 @@
  '(mouse-wheel-scroll-amount (quote (1)))
  '(ns-pop-up-frames nil)
  '(org-agenda-files (quote ("~/.emacs.d/TODO.org")))
- '(org-agenda-restore-windows-after-quit 1)
+ '(org-agenda-restore-windows-after-quit t)
  '(org-enforce-todo-dependencies t)
  '(org-src-fontify-natively t)
  '(package-selected-packages
@@ -34,6 +34,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(font-lock-comment-delimiter-face ((t (:foreground "#586e75" :slant italic))))
  '(font-lock-constant-face ((t (:foreground "#b58900" :weight normal))))
  '(org-level-1 ((t (:inherit variable-pitch :foreground "#dc322f" :height 1.3))))
  '(org-level-2 ((t (:inherit variable-pitch :foreground "#cb4b16" :height 1.2))))
