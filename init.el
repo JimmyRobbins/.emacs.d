@@ -7,14 +7,15 @@
 
 (package-initialize)
 
-(setq is-mac (equal system-type 'darwin))
+(defvar is-mac (equal system-type 'darwin)
+  "Are we running on a macinstosh?")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Loading Elisp files ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/.emacs.d/usr")
 (add-to-list 'load-path "~/.emacs.d/elpa")
+(add-to-list 'load-path "~/.emacs.d/usr")
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Setup Extensions ;;
