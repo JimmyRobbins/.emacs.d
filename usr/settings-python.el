@@ -12,12 +12,14 @@
 (defalias 'workon 'pyenv-workon)
 (elpy-use-ipython)
 (setq elpy-rpc-backend "jedi")
-(elpy-clean-modeline)
 
 
-(require 'projectile)
+;;; python mode hook
+(require 'column-enforce-mode)
+
 (defun my-python-hook ()
   (setq fill-column 80)
+  (column-enforce-mode t)
   (linum-mode t))
 
 (add-hook 'python-mode-hook 'my-python-hook)
