@@ -88,6 +88,14 @@
 ;; Change Colors about a bit ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defun light-theme ()
+  (interactive)
+  (load-theme 'solarized-light))
+
+(defun dark-theme ()
+  (interactive)
+  (load-theme 'solarized-dark))
+
 ;;; Use Solarized colors by name anywhere!
 (defmacro with-solarized-color-names (&rest code)
   `(let ((s-base03    "#002b36")

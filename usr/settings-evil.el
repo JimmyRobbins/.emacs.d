@@ -60,6 +60,7 @@
 
 (evil-ex-define-cmd "Q" 'save-buffers-kill-terminal)
 (evil-ex-define-cmd "save" 'save-some-buffers)
+(evil-ex-define-cmd "W" 'save-some-buffers)
 
 (evil-ex-define-cmd "eval" 'my-evil-eval-and-print)
 (evil-ex-define-cmd "scr[atch]" 'my-switch-to-scratch)
