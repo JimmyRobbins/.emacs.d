@@ -6,16 +6,20 @@
   (require 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
+(require 'column-enforce-mode)
 
 ;;; Use Elpy
 (elpy-enable)
-(defalias 'workon 'pyenv-workon)
 (elpy-use-ipython)
 (setq elpy-rpc-backend "jedi")
+(setq elpy-rpc-python-command "python3")
+(setq python-shell-interpreter "python3")
 
+;;; Virtual environments... this isn't quite working
+(pyvenv-mode)
+(defalias 'workon 'pyenv-workon)
 
 ;;; python mode hook
-(require 'column-enforce-mode)
 
 (defun my-python-hook ()
   (setq fill-column 80)
